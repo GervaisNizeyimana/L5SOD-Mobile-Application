@@ -1,0 +1,348 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Impact;}{\f1\fnil\fcharset0 @PMingLiU-ExtB;}{\f2\fnil Arial;}{\f3\fnil\fcharset2 Symbol;}}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9                                                                        MOBILE APPLICATION GROUPWORK \par
+member's name: \par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 IZERE BONFILS\par
+{\pntext\f3\'B7\tab}HABARUREMA CENTINEL\par
+{\pntext\f3\'B7\tab}KAYUMBA FRED \par
+{\pntext\f3\'B7\tab}CHRISOSTOME BIZIYAREMYE\par
+{\pntext\f3\'B7\tab}MUGISHA PACIFIQUE\par
+{\pntext\f3\'B7\tab}KWIZERA MANZI PACIFIQUE\par
+{\pntext\f3\'B7\tab}HAKIZIMANA MUKHAMAD\par
+{\pntext\f3\'B7\tab}UWASE VANESSA\par
+
+\pard\sa200\sl276\slmult1\ul\f1\par
+\ulnone                               \ul\b MOBILE APPLICATION GROUP 3\ulnone\b0\par
+\par
+\b Question 15\b0 : Dart and Flutter SDK Verification\par
+1. Identify the commands used to check the installed Dart and Flutter versions.\par
+- Dart version:\par
+dart --version\par
+- Flutter version:\par
+flutter --version\par
+2. Explain how the flutter doctor command helps identify problems in the development environment.\par
+The flutter doctor command checks whether Flutter and the required development tools are correctly installed and configured.\par
+It helps identify problems such as:\par
+- Missing Android SDK.\par
+- Incorrect Flutter configuration.\par
+- Missing development tools.\par
+- Unaccepted Android licenses.\par
+- Problems with the development environment.\par
+3. Describe the steps involved in accepting Android SDK licenses.\par
+1. Open Command Prompt or Terminal.\par
+2. Run the following command:\par
+flutter doctor --android-licenses\par
+3. Press Enter.\par
+4. Type y whenever you are asked to accept a license.\par
+5. Continue until all licenses are accepted.\par
+Successful output:\par
+All SDK package licenses accepted\par
+4. Explain why it is important to verify development tools before starting application development.\par
+- To ensure all required tools are installed.\par
+- To identify and fix errors early.\par
+- To ensure Flutter can detect the Android SDK.\par
+- To avoid problems when building and running applications.\par
+- To create a properly configured development environment.\par
+\par
+\b Question 16\b0 : Student Registration System\par
+Question: Write a Dart program that declares a student's name using var, age using final, and school name using const.\par
+\par
+Answer:\par
+void main() \{\par
+  var studentName = "Chrisostome";\par
+  final int age = 12;\par
+  const String schoolName = "CMS UNILAK";\par
+  print("STUDENT REGISTRATION INFORMATION");\par
+  print("Student Name: $studentName");\par
+  print("Age: $age");\par
+  print("School Name: $schoolName");\par
+\}\par
+Expected output:\par
+STUDENT REGISTRATION INFORMATION\par
+Student Name: Chrisostome\par
+Age: 12\par
+School Name: CMS UNILAK\par
+Explanation:\par
+Keyword\tab Meaning\par
+var\tab Automatically identifies the data type.\par
+final\tab Allows a variable to be assigned only once.\par
+const\tab Declares a compile-time constant.\par
+String\tab Stores text.\par
+int\tab Stores whole numbers.\par
+print()\tab Displays information on the console\par
+\par
+\b Question 17\b0 : Student Marks Management\par
+Question: Write a Dart program that creates a List of five students' marks and performs different List operations.\par
+Answer:\par
+void main() \{\par
+  // Creating a List of five students' marks\par
+  List<int> marks = [70, 85, 60, 90, 75];\par
+  // Displaying the second student's mark\par
+  print("Second student's mark: $\{marks[1]\}");\par
+  // Adding one mark\par
+  marks.add(80);\par
+  // Adding two marks\par
+  marks.addAll([65, 95]);\par
+  // Removing one mark using its index\par
+  marks.removeAt(2);\par
+  // Displaying all marks\par
+  print("Student marks: $marks");\par
+  // Displaying total number of marks\par
+  print("Total marks: $\{marks.length\}");\par
+  // Checking whether 80 exists\par
+  print("Does 80 exist? $\{marks.contains(80)\}");\par
+\}\par
+Expected output:\par
+Second student's mark: 85\par
+Student marks: [70, 85, 90, 75, 80, 65, 95]\par
+Total marks: 7\par
+Does 80 exist? true\par
+\par
+Explanation of List methods:\par
+Method\tab Purpose\par
+List<int>\tab Creates a list of integers.\par
+marks[1]\tab Accesses the second item.\par
+add()\tab Adds one item.\par
+addAll()\tab Adds multiple items.\par
+removeAt(2)\tab Removes the item at index 2.\par
+length\tab Counts the items in a list.\par
+contains(80)\tab Checks whether 80 exists.\par
+Important for exams\par
+Dart List indexes start from zero:\par
+Index:  0   1   2   3   4\par
+Marks: 70  85  60  90  75\par
+\par
+Therefore, marks[1] displays 85, not 70.\par
+\par
+\b Question 18\b0 : Unique Student Registration\par
+Question: Write a Dart program that uses a Set to store unique student registration numbers.\par
+Answer:\par
+void main() \{\par
+  // Creating a Set of five registration numbers\par
+  Set<int> registrationNumbers = \{101, 102, 103, 104, 105\};\par
+  // Adding two new registration numbers\par
+  registrationNumbers.add(106);\par
+  registrationNumbers.add(107);\par
+  // Attempting to add a duplicate\par
+  registrationNumbers.add(103);\par
+  // Checking whether a registration number exists\par
+  print("Does 103 exist? $\{registrationNumbers.contains(103)\}");\par
+  // Displaying unique registration numbers\par
+  print("Registration numbers: $registrationNumbers");\par
+  // Displaying total unique registration numbers\par
+  print("Total unique students: $\{registrationNumbers.length\}");\par
+  // Creating another Set\par
+  Set<int> otherNumbers = \{104, 105, 108, 109\};\par
+  // Union operation\par
+  print("Union: $\{registrationNumbers.union(otherNumbers)\}");\par
+  // Intersection operation\par
+  print("Intersection: $\{registrationNumbers.intersection(otherNumbers)\}");\par
+\}\par
+\par
+Expected output:\par
+Does 103 exist? true\par
+Registration numbers: \{101, 102, 103, 104, 105, 106, 107\}\par
+Total unique students: 7\par
+Union: \{101, 102, 103, 104, 105, 106, 107, 108, 109\}\par
+Intersection: \{104, 105\}\par
+Explanation of Set methods:\par
+Method\tab Purpose\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Set<int>\tab Creates a collection of unique integers.\par
+{\pntext\f3\'B7\tab}add()\tab Adds one unique item.\par
+{\pntext\f3\'B7\tab}contains()\tab Checks whether an item exists.\par
+{\pntext\f3\'B7\tab}length\tab Counts unique items.\par
+{\pntext\f3\'B7\tab}union()\tab Combines two Sets without duplicates.\par
+{\pntext\f3\'B7\tab}intersection()\tab Returns common items in two Sets.\par
+{\pntext\f3\'B7\tab}Important: A Set does not allow duplicate values. When we add 103 again, Dart ignores the duplicate.\par
+
+\pard\sa200\sl276\slmult1\par
+\b Question 19\b0 : Student Information Management Using Map\par
+Question: Write a Dart program that stores student information using key-value pairs.\par
+Answer:\par
+void main() \{\par
+  // Creating a Map\par
+  Map<String, dynamic> student = \{\par
+    "name": "Chrisostome",\par
+    "age": 12,\par
+    "school": "CMS UNILAK",\par
+    "status": true\par
+  \};\par
+  // Displaying student's name and age\par
+  print("Student Name: $\{student["name"]\}");\par
+  print("Student Age: $\{student["age"]\}");\par
+  // Updating student's age\par
+  student["age"] = 21;\par
+  // Adding department\par
+  student["department"] = "Software Development";\par
+  // Checking whether department exists\par
+  print("Department exists: $\{student.containsKey("department")\}");\par
+  // Removing school information\par
+  student.remove("school");\par
+  // Displaying remaining keys and values\par
+  print("Remaining student information:");\par
+  print("Keys: $\{student.keys\}");\par
+  print("Values: $\{student.values\}");\par
+\}\par
+Expected output:\par
+Student Name: Chrisostome\par
+Student Age: 12\par
+\par
+Department exists: true\par
+\par
+Remaining student information:\par
+Keys: (name, age, status, department)\par
+Values: (Chrisostome, 21, true, Software Development)\par
+Explanation of Map methods:\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Method\tab Purpose\par
+{\pntext\f3\'B7\tab}Map<String, dynamic>\tab Stores key-value pairs.\par
+{\pntext\f3\'B7\tab}student["name"]\tab Accesses the value using its key.\par
+{\pntext\f3\'B7\tab}student["age"] = 21\tab Updates an existing value.\par
+{\pntext\f3\'B7\tab}containsKey()\tab Checks whether a key exists.\par
+{\pntext\f3\'B7\tab}remove()\tab Removes a key-value pair.\par
+{\pntext\f3\'B7\tab}keys\tab Displays all keys.\par
+{\pntext\f3\'B7\tab}values\tab Displays all values.\par
+
+\pard\sa200\sl276\slmult1\par
+\b Question 20\b0 : Dart Data Types and Naming Conventions\par
+Question: Write a Dart program demonstrating different data types, dynamic, Object, nullable variables, type inference, a StudentProfile class and a calculateTotal() function.\par
+\par
+Answer:\par
+// Creating a class\par
+class StudentProfile \{\par
+  String studentName = "Chrisostome";\par
+  int studentAge = 20;\par
+\}\par
+void main() \{\par
+  // 1. Different data types\par
+  int age = 20;\par
+  double marks = 85.5;\par
+  String studentName = "Chrisostome";\par
+  bool isStudent = true;\par
+  // 2. Dynamic variable\par
+  dynamic value = 100;\par
+  print(value);\par
+  value = "Hello Dart";\par
+  print(value);\par
+  value = true;\par
+  print(value);\par
+  // 3. Object variable\par
+  Object studentInfo = "Chrisostome";\par
+  print(studentInfo);\par
+  studentInfo = 12;\par
+  print(studentInfo);\par
+  studentInfo = true;\par
+  print(studentInfo);\par
+  // 4. Nullable String\par
+  String? schoolName = "CMS UNILAK";\par
+  print(schoolName);\par
+  // 5. Type inference using var\par
+  var department = "Software Development";\par
+  print(department);\par
+  // 6. Creating StudentProfile object\par
+  StudentProfile student = StudentProfile();\par
+  print(student.studentName);\par
+  print(student.studentAge);\par
+  // 7. Calling calculateTotal()\par
+  int total = calculateTotal(80, 85, 90);\par
+  print("Total marks: $total");\par
+\}\par
+// Function to calculate total marks\par
+int calculateTotal(int mark1, int mark2, int mark3) \{\par
+  return mark1 + mark2 + mark3;\par
+\}\par
+Expected output:\par
+100\par
+Hello Dart\par
+true\par
+Chrisostome\par
+12\par
+true\par
+CMS UNILAK\par
+Software Development\par
+Chrisostome\par
+20\par
+Total marks: 255\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Explanation of important concepts:\par
+{\pntext\f3\'B7\tab}Concept\tab Explanation\par
+{\pntext\f3\'B7\tab}int\tab Stores whole numbers.\par
+{\pntext\f3\'B7\tab}double\tab Stores decimal numbers.\par
+{\pntext\f3\'B7\tab}String\tab Stores text.\par
+{\pntext\f3\'B7\tab}bool\tab Stores true or false.\par
+{\pntext\f3\'B7\tab}dynamic\tab Allows different data types during execution.\par
+{\pntext\f3\'B7\tab}Object\tab Stores different non-null values.\par
+{\pntext\f3\'B7\tab}String?\tab Allows a String variable to contain null.\par
+{\pntext\f3\'B7\tab}var\tab Automatically identifies the data type.\par
+{\pntext\f3\'B7\tab}class\tab Defines a class with properties.\par
+{\pntext\f3\'B7\tab}calculateTotal()\tab A function that calculates three marks.\par
+
+\pard\sa200\sl276\slmult1\par
+Naming conventions:\par
+styles:\par
+1. Lower camel case: Used for variables and functions.\par
+\par
+Examples:\par
+- studentName\par
+- studentAge\par
+- calculateTotal()\par
+2. Upper camel case (PascalCase): Used for class names.\par
+\par
+Examples:\par
+- StudentProfile\par
+- Student\par
+- Teacher\par
+\b Question 21\b0 : Student Examination Results\par
+Question: Write a Dart program that evaluates students' examination performance and assigns grades using if, else if and else.\par
+\par
+Grading system:\par
+Marks\tab Grade\par
+80\f2\endash\f1 100\tab Excellent\par
+70\f2\endash\f1 79\tab Very Good\par
+50\f2\endash\f1 69\tab Pass\par
+Below 50\tab Fail\par
+Answer:\par
+void main() \{\par
+  // Declaring student information\par
+  String studentName = "Chrisostome";\par
+  int marks = 85;\par
+  String grade;\par
+  // Checking student's performance\par
+  if (marks >= 80 && marks <= 100) \{\par
+    grade = "Excellent";\par
+  \} else if (marks >= 70 && marks < 80) \{\par
+    grade = "Very Good";\par
+  \} else if (marks >= 50 && marks < 70) \{\par
+    grade = "Pass";\par
+  \} else \{\par
+    grade = "Fail";\par
+  \}\par
+  // Displaying student information\par
+  print("STUDENT EXAMINATION RESULTS");\par
+  print("Student Name: $studentName");\par
+  print("Marks: $marks");\par
+  print("Grade: $grade");\par
+\}\par
+Expected output:\par
+STUDENT EXAMINATION RESULTS\par
+Student Name: Chrisostome\par
+Marks: 85\par
+Grade: Excellent\par
+Explanation:\par
+- if: Checks whether marks are between 80 and 100.\par
+- else if: Checks another condition when the previous condition is false.\par
+- else: Executes when none of the previous conditions is true.\par
+- &&: Means AND. Both conditions must be true.\par
+- grade: Stores the result of the student's performance.\par
+Sequential execution:\par
+Sequential execution means instructions run one after another, from top to bottom.\par
+In this program:\par
+1. The student's name is declared.\par
+2. The examination marks are declared.\par
+3. The program checks the marks.\par
+4. The grade is assigned.\par
+5. The student's information is displayed.\par
+}
+ 
